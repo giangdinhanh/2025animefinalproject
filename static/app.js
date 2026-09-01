@@ -77,6 +77,7 @@ async function initInsights(){
   }
 }
 document.addEventListener('DOMContentLoaded',()=>{initReveal();initCounters();initHeroParallax();initPredictor();initInsights()});
+<<<<<<< HEAD
 
 
 /* Exact Favorites time-series values from timeseriesforecast.xlsx */
@@ -193,3 +194,5 @@ function initForecast(){
 
 
 document.addEventListener('DOMContentLoaded',()=>{initReveal();initCounters();initHeroParallax();initPredictor();initInsights();initForecast()});
+=======
+>>>>>>> eb3d34213c6638779acdd03aeafb35ac4b16f163
