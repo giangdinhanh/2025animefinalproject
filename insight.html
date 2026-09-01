@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AniBomb — Market Insights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="page">
+    <div class="shell">
+      <section class="subpage-hero">
+        <div class="topbar" style="padding:0">
+          <a class="brand" href="index.html"><img src="static/logo.png" alt="AniBomb"><span>Anime Analytics</span></a>
+          <nav class="nav-pill">
+            <a href="index.html">Home</a><a href="predictor.html">Predictor</a><a class="active" href="insight.html">Insights</a><a href="info.html">Info</a>
+          </nav>
+          <a class="client-btn" href="predictor.html">+ Test a Title</a>
+        </div>
+        <div class="subpage-title">
+          <div class="eyebrow">Market & genre insights</div>
+          <h1>See where audiences are moving_</h1>
+          <p>Explore genre performance and historical audience trends using the real records and dimensions from the project workbook.</p>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-head">
+          <div><div class="kicker">Genre performance</div><h2>What audiences favorite.</h2></div>
+          <div class="filters">
+            <select id="genreFilter" aria-label="Genre filter"><option value="all">All Genres</option></select>
+            <select id="seasonFilter" aria-label="Season filter"><option value="all">All Seasons</option></select>
+            <select id="sourceFilter" aria-label="Source filter"><option value="all">All Sources</option></select>
+          </div>
+        </div>
+
+        <div class="insight-stat-strip" id="insightStats" aria-live="polite">
+          <div class="insight-stat"><span>Matching titles</span><strong id="matchCount">—</strong></div>
+          <div class="insight-stat"><span>Avg favorites</span><strong id="avgFavorites">—</strong></div>
+          <div class="insight-stat"><span>Avg members</span><strong id="avgMembers">—</strong></div>
+          <div class="insight-stat"><span>Avg score</span><strong id="avgScore">—</strong></div>
+        </div>
+        <div class="filter-summary" id="filterSummary">Loading workbook data…</div>
+
+        <div class="two-col">
+          <div class="content-card">
+            <h3 class="card-title">Average favorites by genre</h3>
+            <div class="chart-wrap"><canvas id="genreChart"></canvas></div>
+          </div>
+          <div class="content-card">
+            <h3 class="card-title">Top combinations</h3>
+            <div class="genre-list" id="topCombinations">
+              <div class="genre-row"><strong>Loading combinations…</strong><span class="tier">…</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="content-card">
+          <div class="section-head">
+            <div><div class="kicker">Temporal analysis</div><h2>Audience trend over time.</h2></div>
+            <p id="trendDescription">Total members by premiered year for the same filtered cohort, using the 2004–2024 analysis window from the workbook.</p>
+          </div>
+          <div class="chart-wrap"><canvas id="trendChart"></canvas></div>
+        </div>
+      </section>
+
+      <footer class="footer"><div><strong>AniBomb</strong> — Insights</div><div>Interactive charts powered by Chart.js + project workbook data</div></footer>
+    </div>
+  </div>
+  <script src="static/insight-data.js"></script>
+  <script src="static/app.js"></script>
+</body>
+</html>
