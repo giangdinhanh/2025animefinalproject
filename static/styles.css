@@ -68,7 +68,6 @@ img{max-width:100%;display:block}
 .filters select:focus{outline:3px solid rgba(127,121,242,.16)}
 @media(max-width:980px){.insight-stat-strip{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.insight-stat-strip{grid-template-columns:1fr 1fr}.insight-stat{padding:15px}.insight-stat strong{font-size:21px}.filters{width:100%}.filters select{flex:1 1 100%;width:100%}}
-<<<<<<< HEAD
 
 
 /* Navigation: keep inactive labels readable inside the white pill */
@@ -113,5 +112,3 @@ img{max-width:100%;display:block}
   .forecast-chart-wrap{height:340px;padding:8px}
   .seasonality-pill{align-self:flex-start}
 }
-=======
->>>>>>> eb3d34213c6638779acdd03aeafb35ac4b16f163
